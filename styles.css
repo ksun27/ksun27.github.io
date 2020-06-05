@@ -1,0 +1,13 @@
+#dropdown-color {
+    --cirrus-primary: #5e5cc7;
+}
+footer {
+    width: 100%;
+    padding: 3rem 0;
+    background-color: #fefefe;
+    text-align: center;
+    margin-top: 0rem;
+}
+html {
+    scroll-behavior: smooth;
+} 
