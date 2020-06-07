@@ -1,6 +1,9 @@
 #dropdown-color {
     --cirrus-primary: #5e5cc7;
 }
+#splash-img {
+    background: url(splash.gif);
+}
 footer {
     width: 100%;
     padding: 3rem 0;
@@ -10,4 +13,15 @@ footer {
 }
 html {
     scroll-behavior: smooth;
-} 
+}
+.u::after {
+    content: "";
+    transition: all 0.3s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 0.1rem;
+    width: 0;
+    background: white;
+    bottom: -0.25em;
+}
