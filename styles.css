@@ -1,5 +1,12 @@
 #dropdown-color {
-    --cirrus-primary: #5e5cc7;
+    --cirrus-primary: white;
+}
+#back-arrow-color {
+    --cirrus-primary: black;
+    --cirrus-link: black;
+}
+#a-color {
+    color: white;
 }
 #splash-img {
     background: url(splash.gif);
