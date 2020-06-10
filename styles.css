@@ -1,16 +1,20 @@
 #dropdown-color {
     --cirrus-primary: white;
 }
+
 #back-arrow-color {
     --cirrus-primary: black;
     --cirrus-link: black;
 }
+
 #a-color {
     color: white;
 }
+
 #splash-img {
-    background: url(splash.gif);
+    background: url(face.png);
 }
+
 footer {
     width: 100%;
     padding: 3rem 0;
@@ -18,9 +22,11 @@ footer {
     text-align: center;
     margin-top: 0rem;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 .u::after {
     content: "";
     transition: all 0.3s;
@@ -31,4 +37,12 @@ html {
     width: 0;
     background: white;
     bottom: -0.25em;
+}
+
+p,
+article,
+blockquote {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 1rem;
 }
