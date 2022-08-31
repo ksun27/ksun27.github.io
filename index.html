@@ -12,46 +12,42 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="smile.png">
+    <link rel="icon" href="assets/images/smile.png">
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="app.js"></script>
 </head>
 
 <body>
-    <div id="header" class="header header-fixed header-clear">
+    <div id="header" class="header header-fixed u-unselectable header-animated">
         <div class="header-brand">
             <div class="nav-item no-hover">
-                <a id="a-color" href="index.html#"></a>
-                <h6 class="title text-indigo-500">Kevin Sun</h6>
+                <a id="a-color" href="index.html#">
+                    <h6 class="title text-indigo-500">Kevin Sun</h6>
                 </a>
-            </div>
-            <div class="nav-item nav-btn" id="header-btn">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
         </div>
         <div class="header-nav" id="header-menu">
             <div class="nav-right">
-                <div class="nav-item has-sub toggle-hover" id="dropdown header-menu">
-                    <a class="nav-dropdown-link" id="dropdown-color"></a>
-                    <ul class="dropdown-menu dropdown-animated" role="menu">
-                        <li class="dropdown-item" role="menu-item"><a href="about.html">About</a></li>
-                        <li class="dropdown-item" role="menu-item"><a
-                                href="index.html#Projects/Designs">Projects/Design</a></li>
-                        <li class="dropdown-item" role="menu-item"><a href="Kevin Sun Resume.pdf"
-                                target="_blank">Resume</a></li>
-                    </ul>
+                <div class="nav-item">
+                    <a href="index.html#Projects" class="text-indigo-500">Work</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="text-indigo-500">About</a>
+                </div>
+                <div class="nav-item">
+                    <a href="assets/resume/Kevin_Sun_August_2022_Resume.pdf" target="_blank"
+                        class="text-indigo-500">Resume</a>
                 </div>
             </div>
         </div>
     </div>
 
+
     <section class="min-h-100p w-100p u-flex u-justify-center u-items-center">
-        <div class="content w-80p">
+        <div class="content w-80p animated fadeIn">
             <div
-                class="u-flex u-flex-column u-items-flex-start u-justify-flex-start u-relative u-flex-row-md u-items-stretch-md">
+                class="u-flex u-flex-column u-items-flex-start u-justify-flex-start u-relative u-flex-row-md u-items-stretch-md ">
                 <div class="pt-6 mx-auto w-50p-md mx-0-md pb-4-md pr-4-md">
                     <h1 class="headline-4 tracking-tighter text-5xl u-text-center u-text-left-md">
                         Hi there!<br>
@@ -62,165 +58,37 @@
                             class="text-indigo-500">innovator</b> that empowers people to pursue creativity and share
                         their stories.
                     </h5>
-                    <button class="outline bg-indigo-500 text-white btn--lg">View Work</button>
-                    <button class="outline text-indigo-500 btn--lg">Resume</button>
+                    <button class="outline bg-indigo-500 text-white btn--lg"
+                        onclick="document.getElementById('Projects').scrollIntoView();">View Work</button>
+                    <button class="outline text-indigo-500 btn--lg"
+                        onclick="window.open('assets/resume/Kevin_Sun_August_2022_Resume.pdf'); return true;"
+                        target="_blank">Resume</button>
                 </div>
                 <div
                     class="u-relative u-flex u-items-center u-justify-center w-80p mx-auto mt-8 h-80p w-50p-md h-auto-md u-block-md">
-                    <img src="assets/images/face2.jpg"
-                        class="hover-grow u-left-0 u-z-0 img-cover w-100p h-100p mx-auto u-round-xl mx-0-md w-100p-md u-absolute-md u-top-0-md"
-                        alt="image">
+                    <a href="about.html">
+                        <img src="assets/images/face2.jpg"
+                            class="hover-grow u-left-0 u-z-0 img-cover w-100p h-100p mx-auto u-round-xl mx-0-md w-100p-md u-absolute-md u-top-0-md"
+                            alt="image">
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- <section class="u-flex u-justify-center u-items-center">
-        <div class="row content w-80p">
-            <div class="col-4">
-                <div class="card card--slide-up">
-                    <div class="card__container">
-                        <div class="card__image"
-                            style="background-image:url(https://unsplash.it/640/480?random&amp;amp;blur)"></div>
-                    </div>
-                    <div class="card__mobile-title">
-                        <div class="content">
-                            <div class="tile">
-                                <div class="tile__container">
-                                    <p class="tile__title">Kangaroo Valley Safari</p>
-                                    <p class="tile__subtitle">By John Doe</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card__body content">
-                        <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
-                    </div>
-                    <div class="card__footer content">2 min. read 22 comments</div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card card--slide-up">
-                    <div class="card__container">
-                        <div class="card__image" style="background-image:url(https://unsplash.it/g/640/480?random)">
-                        </div>
-                    </div>
-                    <div class="card__mobile-title">
-                        <div class="content">
-                            <div class="tile tile--center">
-                                <div class="tile__icon">
-                                    <figure class="avatar"><img
-                                            src="https://orig04.deviantart.net/aded/f/2013/066/c/2/profile_picture_by_naivety_stock-d5x8lbn.jpg"
-                                            alt="Person" title="" style=""></figure>
-                                </div>
-                                <div class="tile__container">
-                                    <p class="tile__title">Kangaroo Valley Safari</p>
-                                    <p class="tile__subtitle">By John Doe</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card__body content">
-                        <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
-                    </div>
-                    <div class="card__footer content">2 min. read 22 comments</div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card card--slide-up">
-                    <div class="card__container">
-                        <div class="card__image"
-                            style="background-image:url(https://source.unsplash.com/user/erondu/640x480)"></div>
-                    </div>
-                    <div class="card__mobile-title">
-                        <div class="content">
-                            <div class="tile">
-                                <div class="tile__container">
-                                    <p class="tile__title">Kangaroo Valley Safari</p>
-                                    <p class="tile__subtitle">By John Doe</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card__body content">
-                        <p>Located two hours south of Sydney in the Southern Highland of New South Wales...</p>
-                    </div>
-                    <div class="card__footer content">03:45 - 1 Jan 2017</div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- <section class="u-flex u-justify-center u-items-center" id="Projects">
-        <div class="row content">
-            <div class="col-4">
-                <div class="card hover-grow">
-                    <div class="card__container">
-                        <div class="card__image" style="background-image:url(assets/images/ezstox.png)">
-                        </div>
-                        <div class="card__title-container">
-                            <p class="title">Kangaroo Valley Safari</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card hover-grow">
-                    <div class="card__container">
-                        <div class="card__image"
-                            style="background-image:url(https://insight.factset.com/hubfs/Assets/backgrounds/blog-feed-default.png)"></div>
-                        <div class="card__title-container">
-                            <p class="title">Kangaroo Valley Safari</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card hover-grow">
-                    <div class="card__container">
-                        <div class="card__image"
-                            style="background-image:url(assets/images/Logo\ 1.png)"></div>
-                        <div class="card__title-container">
-                            <p class="title">Kangaroo Valley Safari</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="u-flex u-justify-center u-items-center" id="Projects">
-        <div class="row content">
-            <div class="col-6">
-                <div class="card hover-grow">
-                    <div class="card__container">
-                        <div class="card__image" style="background-image:url(assets/images/designs.png)">
-                        </div>
-                        <div class="card__title-container">
-                            <p class="title">Kangaroo Valley Safari</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card hover-grow">
-                    <div class="card__container">
-                        <div class="card__image"
-                            style="background-image:url(assets/images/art.png)"></div>
-                        <div class="card__title-container">
-                            <p class="title">Kangaroo Valley Safari</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <section class="u-flex u-justify-center u-items-center" id="Projects">
+    <div class="content animated fadeIn">
+        <div class="divider"></div>
+    </div>
+    <section class="u-flex u-justify-center u-items-center animated fadeIn" id="Projects">
         <div class="row content">
             <div class="col-6">
                 <figure class="fig">
-                    <a href="swipeme.html">
+                    <a href="">
                         <img class="hover-grow img-stretch u-round-xl" src="assets/logos/factset.png">
+                    </a>
+                </figure>
+                <figure class="fig" style="margin-top: -50px;">
+                    <a href="https://www.behance.net/collection/173186649/Illustrations" target="_blank">
+                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/art.png">
                     </a>
                 </figure>
                 <figure class="fig" style="margin-top: -50px;">
@@ -240,12 +108,20 @@
                         <img class="hover-grow img-stretch u-round-xl" src="assets/images/designs.png">
                     </a>
                 </figure>
+                <figure class="fig" style="margin-top: -50px;">
+                    <a href="https://www.behance.net/collection/173186653/Designs" target="_blank">
+                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/designs.png">
+                    </a>
+                </figure>
             </div>
         </div>
     </section>
     <footer>
-        <div class="content ">
-            <h6>Thanks for reading! Stay Connected!</h6>
+        <div class="content animated fadeIn">
+            <h6>Thanks for reading! Want to stay in touch?</h6>
+            <a class="text-indigo-500 text-xl font-extrabold" href="mailto:ks5006@stern.nyu.edu">
+                ks5006@stern.nyu.edu
+            </a>
             <div class="divider"></div>
             <div class="row u-center">
                 <div class="col">
@@ -265,13 +141,6 @@
                     <a href="https://www.behance.net/kevinsun3" target="_blank">
                         <span class="icon">
                             <img class="hover-grow" src="assets/logos/behance-logo.png" />
-                        </span>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="mailto:ks5006@stern.nyu.edu" target="_blank">
-                        <span class="icon">
-                            <img class="hover-grow" src="assets/logos/email.png" />
                         </span>
                     </a>
                 </div>

@@ -9,123 +9,102 @@
     <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="icon" href="smile.png">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="header header-dark header-fixed unselectable header-animated">
+    <div id="header" class="header header-fixed u-unselectable header-animated">
         <div class="header-brand">
             <div class="nav-item no-hover">
-                <h6 class="title"><a href="index.html#">Kevin Sun</a></h6>
-            </div>
-            <div class="nav-item nav-btn" id="header-btn">
-                <span></span>
-                <span></span>
-                <span></span>
+                <a id="a-color" href="index.html#">
+                    <h6 class="title text-indigo-500">Kevin Sun</h6>
+                </a>
             </div>
         </div>
         <div class="header-nav" id="header-menu">
-            <div class="nav-left">
-                <div class="nav-item text-center">
-                </div>
-            </div>
-
             <div class="nav-right">
-                <div class="nav-item has-sub toggle-hover" id="dropdown">
-                    <a class="nav-dropdown-link" id="dropdown-color"></a>
-                    <ul class="dropdown-menu dropdown-animated" role="menu">
-                        <!--<li role="menu-item"><a href="#">Home</a></li>-->
-                        <li role="menu-item"><a href="about.html">About</a></li>
-                        <li role="menu-item"><a href="index.html#Projects/Designs">Projects/Design</a></li>
-                        <li role="menu-item"><a href="Kevin Sun Resume June 2020.pdf" target="_blank">Resume</a></li>
-                    </ul>
+                <div class="nav-item">
+                    <a href="index.html#Projects" class="text-indigo-500">Work</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html" class="text-indigo-500">About</a>
+                </div>
+                <div class="nav-item">
+                    <a href="assets/resume/Kevin_Sun_August_2022_Resume.pdf" target="_blank"
+                        class="text-indigo-500">Resume</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="hero fullscreen">
-        <div class="hero-body u-center">
-            <div class="w-90" style="position: relative">
-                <div class="row level">
-                    <div class="col-6" style="padding: 2rem;">
-                        <i class="fa fa-wrapper animated fadeIn large" aria-hidden="true">
-                            <h1><a href="./index.html#" id="back-arrow-color" class="tooltip tooltip--left"
-                                    data-tooltip="Return">⇐</a></h1>
-                            <h2>Hi, I'm Kevin, but most people call me Ksun.</h2>
-                            <h6 class="font-alt font-light"> <br> I'm a self-taught designer and developer based in New
-                                York City with a
-                                background in software development and visual arts. I love to design and create, and I
-                                pursue artistic projects and create products that help better people's lives. There's a
-                                lot of professional things I could tell you, but I'd rather stick to the more personal
-                                things here. Here are fun facts to get to know me better. <br> <br>
+    <section class="min-h-100p w-100p u-flex u-justify-center u-items-center" style="padding-top: 4rem">
+        <div class="content w-80p">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <i class="fa fa-wrapper animated fadeIn large" aria-hidden="true">
+                        <figure class="fig">
+                            <a href="">
+                                <img class="img-cover img-stretch u-round-xl" src="assets/images/kevin sun.jpeg">
+                            </a>
+                        </figure>
+                    </i>
+                </div>
+                <div class="col-10 offset-1">
+                        <h2 class="text-indigo-500">Hi, I'm Kevin, but most people call me Ksun.</h2>
+                        <h6 class="font-alt font-light"> <br> I'm a developer based in New
+                            York City with a
+                            background in software engineering and product design. I love to create and I
+                            pursue products that help better people's lives. There's a
+                            lot of professional things I could tell you, but I'd rather stick to the more personal
+                            things here. Here are fun facts to get to know me better. <br> <br>
 
-                                🥜 I'm allergic to peanuts. It's actually quite unfortunate. <br> <br>
+                            🥜 I'm allergic to peanuts. It's actually quite unfortunate. <br> <br>
 
-                                🐶 I love dogs. <br> <br>
+                            🐶 I love dogs. <br> <br>
 
-                                🏊‍♂️ I sketch, swim, and play an abnormal amount of CS:GO and Dota 2.
-                                <br> <br>
+                            🏊‍♂️ I sketch, swim, and play an abnormal amount of CS:GO and Dota 2.
+                            <br> <br>
 
-                                I am currently attending New York University with a plan to graduate with two Bachelor’s
-                                degrees in Finance and Computer Science, which means I’m currently seeking internships
-                                in software development, product management, and product design. Feel free to check out
-                                my
-                                work or reach out to me using the links below.</h6>
-                        </i>
-                    </div>
-
-                    <!--<div class="divider divider--v"></div>-->
-
-                    <div class="col-6" style="padding: 2rem;">
-                        <i class="fa fa-wrapper animated fadeIn large" aria-hidden="true">
-                            <img src="kevin sun.jpeg">
-                        </i>
-                    </div>
+                            Feel free to check out
+                            my
+                            work or reach out to me using the links below. Thank you!
+                        </h6>
+                    </i>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
     <footer>
-        <h5>Copyright &copy; 2020 Kevin Sun</h5>
         <div class="content">
+            <h6>Thanks for reading! Want to stay in touch?</h6>
+            <a class="text-indigo-500 text-xl font-extrabold" href="mailto:ks5006@stern.nyu.edu">
+                ks5006@stern.nyu.edu
+            </a>
             <div class="divider"></div>
             <div class="row u-center">
                 <div class="col">
                     <a href="https://www.linkedin.com/in/ksun2715/" target="_blank">
                         <span class="icon">
-                            <img class="hover-grow" src="linkedin.png" />
-                        </span>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="https://dribbble.com/ksunnyxd" target="_blank">
-                        <span class="icon">
-                            <img class="hover-grow " src="dribble.png" />
-                        </span>
+                            <img class="hover-grow" src="assets/logos/linkedin.png" />
                     </a>
                 </div>
                 <div class="col">
                     <a href="https://github.com/ksun27" target="_blank">
                         <span class="icon">
-                            <img class="hover-grow" src="github.png" />
+                            <img class="hover-grow" src="assets/logos/github.png" />
                         </span>
                     </a>
                 </div>
                 <div class="col">
                     <a href="https://www.behance.net/kevinsun3" target="_blank">
                         <span class="icon">
-                            <img class="hover-grow" src="behance-logo.png" />
-                        </span>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="mailto:ks5006@stern.nyu.edu" target="_blank">
-                        <span class="icon">
-                            <img class="hover-grow" src="email.png" />
+                            <img class="hover-grow" src="assets/logos/behance-logo.png" />
                         </span>
                     </a>
                 </div>
