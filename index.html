@@ -9,151 +9,139 @@
     <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="smile.png">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="icon" href="assets/images/smile.png">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="app.js"></script>
 </head>
 
 <body>
-    <div id="header" class="header header-fixed unselectable header-animated header-clear-mod header-clear">
+    <div id="header" class="header header-fixed u-unselectable header-animated">
         <div class="header-brand">
             <div class="nav-item no-hover">
-                <a id="a-color" href="index.html#"></a>
-                <h6 class="title white">Kevin Sun</h6>
+                <a id="a-color" href="index.html#">
+                    <h6 class="title text-indigo-500">Kevin Sun</h6>
                 </a>
-            </div>
-            <div class="nav-item nav-btn" id="header-btn">
-                <span></span>
-                <span></span>
-                <span></span>
             </div>
         </div>
         <div class="header-nav" id="header-menu">
             <div class="nav-right">
-                <!--
                 <div class="nav-item">
-                    <a class="smoothScroll" href="#colors">
-                        <span class="icon">
-                                <i class="fas fa-wrapper fa-pen-fancy small"></i>
-                            </span> Work
-                    </a>
+                    <a href="index.html#Projects" class="text-indigo-500">Work</a>
                 </div>
                 <div class="nav-item">
-                    <a class="smoothScroll" href="#examples">
-                        <span class="icon">
-                                <i class="fas fa-wrapper fa-palette small"></i>
-                            </span> About
-                    </a>
+                    <a href="about.html" class="text-indigo-500">About</a>
                 </div>
                 <div class="nav-item">
-                    <a href="./docs">
-                        <span class="icon">
-                                <i class="fas fa-wrapper fa-boxes small"></i>
-                            </span> Resume
-                    </a>
-                </div>-->
-
-                <div class="nav-item has-sub toggle-hover" id="dropdown header-menu">
-                    <a class="nav-dropdown-link" id="dropdown-color"></a>
-                    <ul class="dropdown-menu dropdown-animated" role="menu">
-                        <li class="dropdown-item" role="menu-item"><a href="about.html">About</a></li>
-                        <li class="dropdown-item" role="menu-item"><a href="index.html#Projects/Designs">Projects/Design</a></li>
-                        <li class="dropdown-item" role="menu-item"><a href="Kevin Sun Resume.pdf" target="_blank">Resume</a></li>
-                    </ul>
+                    <a href="assets/resume/Kevin_Sun_August_2022_Resume.pdf" target="_blank"
+                        class="text-indigo-500">Resume</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="section">
-        <div id="splash-img" class="hero fullscreen hero-img parallax-img">
-            <div class="hero-body">
-                <div class="content">
-                    <div class="text-center">
-                        <i class="fa fa-wrapper animated fadeIn large" aria-hidden="true">
-              <h1 class="uppercase white title">Hi! I'm Kevin Sun.</h1>
-              <h3 class="font-alt font-light uppercase white sub-title faded">I'm a self-taught <b>designer and
-                  developer</b> that studies finance and computer science at New York University. Learn more about me
-                <a href="about.html" class="u u-LR text-light">here</a>.</h3>
-            </i>
-                    </div>
+
+    <section class="min-h-100p w-100p u-flex u-justify-center u-items-center">
+        <div class="content w-80p animated fadeIn">
+            <div
+                class="u-flex u-flex-column u-items-flex-start u-justify-flex-start u-relative u-flex-row-md u-items-stretch-md ">
+                <div class="pt-6 mx-auto w-50p-md mx-0-md pb-4-md pr-4-md">
+                    <h1 class="headline-4 tracking-tighter text-5xl u-text-center u-text-left-md">
+                        Hi there!<br>
+                        <span class="text-indigo-500 font-bold">I'm Kevin.</span>
+                    </h1>
+                    <h5 class="lead mt-4 mb-8 u-text-center text-gray-600 u-text-left-md">
+                        I'm a <b class="text-indigo-500">developer</b>, <b class="text-indigo-500">designer</b>, and <b
+                            class="text-indigo-500">innovator</b> that empowers people to pursue creativity and share
+                        their stories.
+                    </h5>
+                    <button class="outline bg-indigo-500 text-white btn--lg"
+                        onclick="document.getElementById('Projects').scrollIntoView();">View Work</button>
+                    <button class="outline text-indigo-500 btn--lg"
+                        onclick="window.open('assets/resume/Kevin_Sun_August_2022_Resume.pdf'); return true;"
+                        target="_blank">Resume</button>
+                </div>
+                <div
+                    class="u-relative u-flex u-items-center u-justify-center w-80p mx-auto mt-8 h-80p w-50p-md h-auto-md u-block-md">
+                    <a href="about.html">
+                        <img src="assets/images/face2.jpg"
+                            class="hover-grow u-left-0 u-z-0 img-cover w-100p h-100p mx-auto u-round-xl mx-0-md w-100p-md u-absolute-md u-top-0-md"
+                            alt="image">
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section" id="Projects/Designs">
-        <div class="hero-body u-center">
-            <div class="w-90" style="position: relative">
-                <h1 class="headline-4 uppercase title u-center" style="padding-top: 3rem;">Projects/Designs</h1>
-                <div class="row level">
-                    <div class="col-6" style="padding: 0.25rem;">
-                        <figure class="fig">
-                            <a href="swipeme.html">
-                                <img class="hover-grow img-stretch" src="newlogo.png" />
-                            </a>
-                        </figure>
-                        <figure class="fig" style="margin-top: -50px;">
-                            <a href="https://www.behance.net/collection/173186649/Illustrations" target="_blank">
-                                <img class="hover-grow img-stretch" src="art.png" />
-                            </a>
-                        </figure>
-                    </div>
-                    <div class="col-6" style="padding: 0.25rem;">
-                        <figure class="fig">
-                            <a href="ezstox.html">
-                                <img class="hover-grow img-stretch" src="ezstox.png" />
-                            </a>
-                        </figure>
-                        <figure class="fig" style="margin-top: -50px;">
-                            <a href="https://www.behance.net/collection/173186653/Designs" target="_blank">
-                                <img class="hover-grow img-stretch" src="designs.png" />
-                            </a>
-                        </figure>
-                    </div>
-                </div>
+    <div class="content animated fadeIn">
+        <div class="divider"></div>
+    </div>
+    <section class="u-flex u-justify-center u-items-center animated fadeIn" id="Projects">
+        <div class="row content">
+            <div class="col-6">
+                <figure class="fig">
+                    <a href="factset.html">
+                        <img class="hover-grow img-stretch u-round-xl" src="assets/logos/factset.png">
+                    </a>
+                </figure>
+                <figure class="fig" style="margin-top: -50px;">
+                    <a href="fantasyzer.html">
+                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/fantasyzer.png">
+                    </a>
+                </figure>
+                <figure class="fig" style="margin-top: -50px;">
+                    <a href="https://www.behance.net/collection/173186649/Illustrations" target="_blank">
+                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/art.png">
+                    </a>
+                </figure>
+            </div>
+            <div class="col-6">
+                <figure class="fig">
+                    <a href="ezstox.html">
+                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/ezstox.png" title="" style="">
+                    </a>
+                </figure>
+                <figure class="fig" style="margin-top: -50px;">
+                    <a href="wnba.html">
+                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/wnba.png">
+                    </a>
+                </figure>
+                <figure class="fig" style="margin-top: -50px;">
+                    <a href="https://www.behance.net/collection/173186653/Designs" target="_blank">
+                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/designs.png">
+                    </a>
+                </figure>
             </div>
         </div>
     </section>
     <footer>
-        <h5 class="font-alt">Copyright &copy; 2020 Kevin Sun</h5>
-        <div class="content ">
+        <div class="content animated fadeIn">
+            <h6>Thanks for reading! Want to stay in touch?</h6>
+            <a class="text-indigo-500 text-xl font-extrabold" href="mailto:ks5006@stern.nyu.edu">
+                ks5006@stern.nyu.edu
+            </a>
             <div class="divider"></div>
             <div class="row u-center">
                 <div class="col">
                     <a href="https://www.linkedin.com/in/ksun2715/" target="_blank">
                         <span class="icon">
-              <img class="hover-grow" src="linkedin.png" />
-            </span>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="https://www.instagram.com/ksunnyxd/" target="_blank">
-                        <span class="icon">
-              <img class="hover-grow " src="instagram.png" />
-            </span>
+                            <img class="hover-grow" src="assets/logos/linkedin.png" />
                     </a>
                 </div>
                 <div class="col">
                     <a href="https://github.com/ksun27" target="_blank">
                         <span class="icon">
-              <img class="hover-grow" src="github.png" />
-            </span>
+                            <img class="hover-grow" src="assets/logos/github.png" />
+                        </span>
                     </a>
                 </div>
                 <div class="col">
                     <a href="https://www.behance.net/kevinsun3" target="_blank">
                         <span class="icon">
-              <img class="hover-grow" src="behance-logo.png" />
-            </span>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="mailto:ks5006@stern.nyu.edu" target="_blank">
-                        <span class="icon">
-              <img class="hover-grow" src="email.png" />
-            </span>
+                            <img class="hover-grow" src="assets/logos/behance-logo.png" />
+                        </span>
                     </a>
                 </div>
             </div>
