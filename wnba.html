@@ -9,11 +9,9 @@
     <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="icon" href="smile.png">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -35,8 +33,7 @@
                     <a href="about.html" class="text-indigo-500">About</a>
                 </div>
                 <div class="nav-item">
-                    <a href="assets/resume/Kevin_Sun_August_2022_Resume.pdf" target="_blank"
-                        class="text-indigo-500">Resume</a>
+                    <a href="assets/resume/jan_2024.pdf" target="_blank" class="text-indigo-500">Resume</a>
                 </div>
             </div>
         </div>
@@ -44,8 +41,7 @@
     <section class="padtop">
         <div class=" content w-50 u-center animated fadeIn" id="fadeIn-div" style="position: relative">
             <div class="col-12" style="padding-top: 5rem;">
-                <h1><a href="./index.html#Projects/Designs" id="back-arrow-color" class="tooltip tooltip--left"
-                        data-tooltip="Return">⇐</a> WNBA Statistics Project
+                <h1><a href="./index.html#Projects/Designs" id="back-arrow-color" class="tooltip tooltip--left" data-tooltip="Return">⇐</a> WNBA Statistics Project
                 </h1>
                 <figure class="fig" style="padding-top: 1rem">
                     <img class="img-stretch u-round-xl" src="assets/images/wnba.png" />
@@ -58,8 +54,7 @@
                 </p>
                 <h2 style="padding-top: 1rem">Part 1 - Questions</h2>
                 <p class="font-light">
-                    Question 1:
-                    What is the average Player Efficiency Rating among WNBA players from 1997-2019?
+                    Question 1: What is the average Player Efficiency Rating among WNBA players from 1997-2019?
                     <ul>
                         <li>Who (population): WNBA Players</li>
                         <li>What (subject, discipline): Baskeball, WNBA Statistics</li>
@@ -68,8 +63,7 @@
                         <li>How much data do you need to do the analysis/work: CSV with WNBA Player Statistics highlighting Player Efficiency Rating</li>
                     </ul>
 
-                    Question 2:
-                    What is the average age of players among WNBA players from 1997-2019?
+                    Question 2: What is the average age of players among WNBA players from 1997-2019?
                     <ul>
                         <li>Who (population): WNBA Players</li>
                         <li>What (subject, discipline): Baskeball, WNBA Statistics</li>
@@ -77,8 +71,7 @@
                         <li>When (snapshot, longitudinal): 1997-2019 WNBA Seasons, N/A</li>
                         <li>How much data do you need to do the analysis/work: CSV with WNBA Player Statistics highlighting age and season</li>
                     </ul>
-                    Question 3:
-                    Who is the has the highest Player Efficiency Rating among WNBA players from 1997-2019?
+                    Question 3: Who is the has the highest Player Efficiency Rating among WNBA players from 1997-2019?
                     <ul>
                         <li>Who (population): WNBA Players</li>
                         <li>What (subject, discipline): Baskeball, WNBA Statistics</li>
@@ -89,9 +82,8 @@
                 </p>
                 <h4 style="padding-top: 1rem">Who Might Collect Relevant Data / What Articles or Publications Cite a Relevant Data Set?</h4>
                 <p class="font-light">
-                    The WNBA may already collect statistics and data regarding WNBA players, so I can possibly look on the WNBA website for more details. 
-                    There are also other websites that are collecting data regarding WNBA players and those may also be useful when trying to find the 
-                    relevant data to answer these questions.
+                    The WNBA may already collect statistics and data regarding WNBA players, so I can possibly look on the WNBA website for more details. There are also other websites that are collecting data regarding WNBA players and those may also be useful when trying
+                    to find the relevant data to answer these questions.
                 </p>
                 <h2 style="padding-top: 1rem">Part 2 - Selecting a Data Set, Adding Documentation</h2>
                 <p class="font-light">
@@ -137,14 +129,10 @@ with open('../data/raw/wnba-player-stats.csv', 'r') as f:
                 <h2 style="padding-top: 1rem">Part 3 - Extract / Transform</h2>
                 <p class="font-light">
                     <b>Process for extracting, transforming, cleaning incoming data:</b>
-                    <br>
-                    Columns that I plan on using are the Player Name, Year, Age, and Player Efficiency Rating columns from my dataset.
-
-                    The Player Name column is already a string which I need. The Year column is tricky, as it is a numerical type but I still need it in the type of string as it is a categorical data type rather than a quantitative one. For Age and Player Efficiency Rating I will need to convert to Integer and Float types.
-
-                    There are some empty numerical cells for players and those will be turned into 0 because in this case means that there are not statistics recorded for that player. It will show up as an empty string so it is necessary to fill in those cells. I also need to change some of the data types for some columns.
-
-                    I'll use a generator to take in values from columns that I want. I will then put this data into a list where I can manipulate and hopefully answer the questions that I came up with.
+                    <br> Columns that I plan on using are the Player Name, Year, Age, and Player Efficiency Rating columns from my dataset. The Player Name column is already a string which I need. The Year column is tricky, as it is a numerical type but
+                    I still need it in the type of string as it is a categorical data type rather than a quantitative one. For Age and Player Efficiency Rating I will need to convert to Integer and Float types. There are some empty numerical cells for
+                    players and those will be turned into 0 because in this case means that there are not statistics recorded for that player. It will show up as an empty string so it is necessary to fill in those cells. I also need to change some of
+                    the data types for some columns. I'll use a generator to take in values from columns that I want. I will then put this data into a list where I can manipulate and hopefully answer the questions that I came up with.
                 </p>
                 <pre><code data-lang="python">
 import csv
@@ -257,16 +245,19 @@ plt.show()
                     <img class="img-stretch u-round-xl" src="assets/images/averageage.png" />
                 </figure>
                 <p class="font-light">
-                    This visualization shows the average age of players per year in the WNBA. As you can see, there is not much fluctuation with the average age of players as the average only ranges from 25-30 years old each WNBA season. We can see that the max average age of players was 27 in 2003.                
+                    This visualization shows the average age of players per year in the WNBA. As you can see, there is not much fluctuation with the average age of players as the average only ranges from 25-30 years old each WNBA season. We can see that the max average age
+                    of players was 27 in 2003.
                 </p>
                 <h2 style="padding-top: 1rem">Part 5 - Conclusion</h2>
                 <p class="font-light">
-                    In conclusion, I was able to answer 3/3 of my questions. For the 1st question, the answer to that is to use the mean() function and put PERS as the parameter. So mean(PERS) returned 11.900386299253112 which was the average Player Efficiency Rating in the WNBA from 1997-2019. For the 2nd question, I was able to do the same thing as above and use mean(ages) to find the answer which is 26.29513262941025. For the last question, I can use max(PERS) to find the answer to that which is 78.9. For the rest of my analysis, I was able to also find an extension to my second question which is to find the average age of players per year in the WNBA from 1997-2019. Above is the graph for that and it shows that the average age always hovers around 26. Overall, my analysis returned some pretty interesting statistics for WNBA players from 1997-2019.
+                    In conclusion, I was able to answer 3/3 of my questions. For the 1st question, the answer to that is to use the mean() function and put PERS as the parameter. So mean(PERS) returned 11.900386299253112 which was the average Player Efficiency Rating in
+                    the WNBA from 1997-2019. For the 2nd question, I was able to do the same thing as above and use mean(ages) to find the answer which is 26.29513262941025. For the last question, I can use max(PERS) to find the answer to that which is
+                    78.9. For the rest of my analysis, I was able to also find an extension to my second question which is to find the average age of players per year in the WNBA from 1997-2019. Above is the graph for that and it shows that the average
+                    age always hovers around 26. Overall, my analysis returned some pretty interesting statistics for WNBA players from 1997-2019.
                 </p>
                 <h4> <a href="https://github.com/ksun27/wnba_stats_data_project" target="_blank">Github Repository</a></h4>
                 <h3>
-                    <a href="./index.html#Projects/Designs" id="back-arrow-color" class="tooltip tooltip--left"
-                        data-tooltip="Return">⇐ Back</a>
+                    <a href="./index.html#Projects/Designs" id="back-arrow-color" class="tooltip tooltip--left" data-tooltip="Return">⇐ Back</a>
                 </h3>
             </div>
         </div>
