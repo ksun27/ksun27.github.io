@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WNBA Statistics Project - Kevin Sun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="icon" href="../../assets/images/smile.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">Kevin Sun</a>
+            <div class="nav-links">
+                <a href="../../pages/about.html" class="nav-link">About</a>
+                <a href="../../index.html#projects" class="nav-link">Projects</a>
+                <a href="../../index.html#contact" class="nav-link">Contact</a>
+                <a href="../../assets/documents/ksun_resume_aug_2025.pdf" target="_blank" class="nav-link">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <main class="main">
+        <article class="project-detail">
+            <div class="container">
+                <!-- Back Navigation -->
+                <div class="back-nav">
+                    <a href="../../index.html#projects" class="back-link">← Back to Projects</a>
+                </div>
+
+                <!-- Project Header -->
+                <header class="project-header">
+                    <h1 class="project-title">WNBA Statistics Project</h1>
+                    <p class="project-subtitle">Data Analysis & Visualization</p>
+                    <div class="project-hero-image">
+                        <img src="../../assets/images/wnba.png" alt="WNBA Statistics Project" class="hero-image">
+                    </div>
+                </header>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                    <section class="content-section">
+                        <h2>Introduction</h2>
+                        <p>This project was done to learn and perform data modeling calculations for WNBA statistics and to understand excel parsing and data management.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Research Questions</h2>
+                        
+                        <div class="research-questions">
+                            <div class="question-block">
+                                <h3>Question 1: What is the average Player Efficiency Rating among WNBA players from 1997-2019?</h3>
+                                <ul>
+                                    <li><strong>Who:</strong> WNBA Players</li>
+                                    <li><strong>What:</strong> Basketball, WNBA Statistics</li>
+                                    <li><strong>Where:</strong> WNBA League in North America</li>
+                                    <li><strong>When:</strong> 1997-2019 WNBA Seasons</li>
+                                    <li><strong>Data needed:</strong> CSV with WNBA Player Statistics highlighting Player Efficiency Rating</li>
+                                </ul>
+                            </div>
+
+                            <div class="question-block">
+                                <h3>Question 2: What is the average age of players among WNBA players from 1997-2019?</h3>
+                                <ul>
+                                    <li><strong>Who:</strong> WNBA Players</li>
+                                    <li><strong>What:</strong> Basketball, WNBA Statistics</li>
+                                    <li><strong>Where:</strong> WNBA League in North America</li>
+                                    <li><strong>When:</strong> 1997-2019 WNBA Seasons</li>
+                                    <li><strong>Data needed:</strong> CSV with WNBA Player Statistics highlighting age and season</li>
+                                </ul>
+                            </div>
+
+                            <div class="question-block">
+                                <h3>Question 3: Who has the highest Player Efficiency Rating among WNBA players from 1997-2019?</h3>
+                                <ul>
+                                    <li><strong>Who:</strong> WNBA Players</li>
+                                    <li><strong>What:</strong> Basketball, WNBA Statistics</li>
+                                    <li><strong>Where:</strong> WNBA League in North America</li>
+                                    <li><strong>When:</strong> 1997-2019 WNBA Seasons</li>
+                                    <li><strong>Data needed:</strong> CSV with WNBA Player Statistics highlighting Player Name and Player Efficiency Rating</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Data Source</h2>
+                        <p>The WNBA and other sports statistics websites collect comprehensive data regarding WNBA players and their performance metrics.</p>
+                        
+                        <div class="data-info">
+                            <ul>
+                                <li><strong>Name:</strong> wnba-player-stats</li>
+                                <li><strong>Source:</strong> <a href="https://github.com/fivethirtyeight/WNBA-stats" target="_blank" class="project-link">FiveThirtyEight WNBA Stats</a></li>
+                                <li><strong>Author:</strong> Neil Paine</li>
+                                <li><strong>Publication Date:</strong> May 25, 2020</li>
+                                <li><strong>Publisher:</strong> FiveThirtyEight</li>
+                                <li><strong>Format:</strong> CSV (comma separated values)</li>
+                                <li><strong>Size:</strong> 530 KB</li>
+                                <li><strong>Records:</strong> 3,884</li>
+                            </ul>
+                        </div>
+
+                        <div class="code-block">
+                            <p><strong>Sample Data Processing:</strong></p>
+                            <pre><code>import csv
+
+with open('../data/raw/wnba-player-stats.csv', 'r') as f:
+    reader = csv.reader(f, delimiter=",", quotechar='"')
+    next(reader, None)
+    data_read = [row for row in reader]
+    for i in range(0,3):
+        print(data_read[i])</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Data Processing</h2>
+                        <p><strong>Process for extracting, transforming, and cleaning data:</strong></p>
+                        <p>The key columns used were Player Name, Year, Age, and Player Efficiency Rating. Data type conversions were performed to ensure proper analysis, with empty numerical cells filled with 0 values to represent missing statistics.</p>
+
+                        <div class="code-block">
+                            <p><strong>Data Extraction Functions:</strong></p>
+                            <pre><code>def get_player_name():
+    with open('../data/raw/wnba-player-stats.csv', 'r') as f:
+        reader = csv.reader(f, delimiter=",", quotechar='"')
+        next(reader, None)
+        data_read = [row for row in reader]
+        for i in range(len(data_read)):
+            yield data_read[i][1]
+
+def get_age():
+    with open('../data/raw/wnba-player-stats.csv', 'r') as f:
+        reader = csv.reader(f, delimiter=",", quotechar='"')
+        next(reader, None)
+        data_read = [row for row in reader]
+        for i in range(len(data_read)):
+            if data_read[i][3] == '':
+                data_read[i][3] = 0
+            yield int(data_read[i][3])</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Visualizations</h2>
+                        
+                        <div class="content-image">
+                            <img src="../../assets/images/numberofplayersperyear.png" alt="Number of Players Per Year" class="section-image">
+                            <p class="image-caption">This visualization shows the number of players per year in the WNBA from 1997-2019. The number of players typically ranges from 150-250 per year, with the highest being 219 active players in 2002.</p>
+                        </div>
+
+                        <div class="content-image">
+                            <img src="../../assets/images/averageage.png" alt="Average Age of Players Per Year" class="section-image">
+                            <p class="image-caption">This visualization shows the average age of players per year in the WNBA. The average age remains relatively stable, ranging from 25-30 years old each season, with a peak average age of 27 in 2003.</p>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Conclusion</h2>
+                        <p>The analysis successfully answered all three research questions:</p>
+                        <ul>
+                            <li><strong>Average Player Efficiency Rating (1997-2019):</strong> 11.90</li>
+                            <li><strong>Average Age of Players (1997-2019):</strong> 26.3 years</li>
+                            <li><strong>Highest Player Efficiency Rating:</strong> 78.9</li>
+                        </ul>
+                        <p>The additional analysis revealed that the average age of players per year consistently hovers around 26 years old throughout the dataset timeframe, providing insights into the demographic stability of the WNBA.</p>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/ksun27/wnba_stats_data_project" target="_blank" class="project-link">View on GitHub</a>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Navigation Footer -->
+                <div class="project-nav-footer">
+                    <a href="../../index.html#projects" class="back-link">← Back to Projects</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">Thanks for reading! Want to stay in touch?</p>
+                <a href="mailto:ksun2715@gmail.com" class="contact-email">ksun2715@gmail.com</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ksun2715/" target="_blank" class="social-link">
+                        <img src="../../assets/icons/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/ksun27" target="_blank" class="social-link">
+                        <img src="../../assets/icons/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.behance.net/kevinsun3" target="_blank" class="social-link">
+                        <img src="../../assets/icons/behance-logo.png" alt="Behance">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

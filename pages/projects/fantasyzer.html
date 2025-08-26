@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasyzer - Kevin Sun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="icon" href="../../assets/images/smile.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">Kevin Sun</a>
+            <div class="nav-links">
+                <a href="../../pages/about.html" class="nav-link">About</a>
+                <a href="../../index.html#projects" class="nav-link">Projects</a>
+                <a href="../../index.html#contact" class="nav-link">Contact</a>
+                <a href="../../assets/documents/ksun_resume_aug_2025.pdf" target="_blank" class="nav-link">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <main class="main">
+        <article class="project-detail">
+            <div class="container">
+                <!-- Back Navigation -->
+                <div class="back-nav">
+                    <a href="../../index.html#projects" class="back-link">← Back to Projects</a>
+                </div>
+
+                <!-- Project Header -->
+                <header class="project-header">
+                    <h1 class="project-title">Fantasyzer</h1>
+                    <p class="project-subtitle">Fantasy Basketball Analytics Platform</p>
+                    <div class="project-hero-image">
+                        <img src="../../assets/images/fantasyzer.png" alt="Fantasyzer Project Overview" class="hero-image">
+                    </div>
+                </header>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                    <section class="content-section">
+                        <h2>Overview</h2>
+                        <p><strong>Problem:</strong> When scrolling through NBA player stats online there are hundreds of players and no way to compare smaller subsets of players for fantasy picks. For example, if you are looking at the ESPN stats table and you want to compare player 2 (Bradley Beal), 9 (Kevin Durant) and 13 (Nikola Jokic) you have to look through the noise of the other 9 players that are in between which presents a poor user experience.</p>
+                        <p><strong>Solution:</strong> An NBA player comparison website that lets you create your own sortable tables of players as well as compare players head to head.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Data Model</h2>
+                        <p>The application stores Users, Players Data, and Lists:</p>
+                        <ul>
+                            <li>Users can have multiple player lists (via references)</li>
+                            <li>Each list can have multiple statistics (by embedding)</li>
+                        </ul>
+                        
+                        <div class="code-block">
+                            <p><strong>Example User:</strong></p>
+                            <pre><code>{
+    username: "Fantasy Player 1",
+    hash: // a password hash,
+    lists: // an array of references to User's Fantasy Teams
+}</code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <p><strong>Example List with Embedded Stats:</strong></p>
+                            <pre><code>{
+    user: // a reference to a User object
+    name: "Fantasy Team 1",
+    stats: [
+        { player: "LeBron James", team: "Los Angeles Lakers", Age: "36"},
+        { player: "Stephen Curry", team: "Golden State Warriors", Age: "33"},
+    ],
+    createdAt: // timestamp
+}</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Wireframes and Site Map</h2>
+                        
+                        <div class="content-image">
+                            <p><strong>/viewPlayers</strong> - page for viewing players</p>
+                            <img src="../../assets/images/viewPlayers.png" alt="View Players Page Wireframe" class="section-image">
+                        </div>
+
+                        <div class="content-image">
+                            <p><strong>/myTeams</strong> - page for showing user's fantasy teams</p>
+                            <img src="../../assets/images/myTeams.png" alt="My Teams Page Wireframe" class="section-image">
+                        </div>
+
+                        <div class="content-image">
+                            <p><strong>/comparePlayers</strong> - page for comparing player statistics</p>
+                            <img src="../../assets/images/comparePlayers.png" alt="Compare Players Page Wireframe" class="section-image">
+                        </div>
+
+                        <div class="content-image">
+                            <p><strong>Site Map</strong></p>
+                            <img src="../../assets/images/sitemap.png" alt="Site Map Diagram" class="section-image">
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>User Stories</h2>
+                        <div class="user-stories">
+                            <div class="user-story">
+                                <p><strong>1.</strong> As a fantasy basketball user I want to be able to view a sortable table of all the players in the NBA so I can explore different players to consider drafting/adding to my fantasy team</p>
+                            </div>
+                            <div class="user-story">
+                                <p><strong>2.</strong> As a fantasy basketball user I want to be able to create a sortable table of a smaller subset of players in the NBA so I can more directly compare/track a group of players that I'm still considering drafting/adding to my fantasy team</p>
+                            </div>
+                            <div class="user-story">
+                                <p><strong>3.</strong> As a fantasy basketball user I want to be able to view a player's current and past statistics against another player and see which player does better in each statistic so I can directly compare two players that I'm considering drafting/adding to my fantasy team</p>
+                            </div>
+                        </div>
+                        
+                        <div class="project-links">
+                            <a href="https://github.com/ksun27/Fantasyzer" target="_blank" class="project-link">View on GitHub</a>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Navigation Footer -->
+                <div class="project-nav-footer">
+                    <a href="../../index.html#projects" class="back-link">← Back to Projects</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">Thanks for reading! Want to stay in touch?</p>
+                <a href="mailto:ksun2715@gmail.com" class="contact-email">ksun2715@gmail.com</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ksun2715/" target="_blank" class="social-link">
+                        <img src="../../assets/icons/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/ksun27" target="_blank" class="social-link">
+                        <img src="../../assets/icons/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.behance.net/kevinsun3" target="_blank" class="social-link">
+                        <img src="../../assets/icons/behance-logo.png" alt="Behance">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
