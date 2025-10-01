@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EzStox - Kevin Sun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="icon" href="../../assets/images/smile.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">ksun</a>
+            <div class="nav-links">
+                <a href="../../pages/about.html" class="nav-link">About</a>
+                <a href="../../index.html#projects" class="nav-link">Projects</a>
+                <a href="../../index.html#contact" class="nav-link">Contact</a>
+                <a href="../../assets/documents/ksun_resume_oct_2025.pdf" target="_blank" class="nav-link">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <main class="main">
+        <article class="project-detail">
+            <div class="container">
+                <!-- Back Navigation -->
+                <div class="back-nav">
+                    <a href="../../index.html#projects" class="back-link">← Back to Projects</a>
+                </div>
+
+                <!-- Project Header -->
+                <header class="project-header">
+                    <h1 class="project-title">EZSTOX</h1>
+                    <p class="project-subtitle">
+                        <a href="https://devpost.com/software/ezstox-6z9wqr" target="_blank" class="project-link">Winner @HackUVA</a>, 
+                        Domain.com Sponsored Award
+                    </p>
+                    <div class="project-hero-image">
+                        <img src="../../assets/images/ezstox.png" alt="EzStox Project Overview" class="hero-image">
+                    </div>
+                </header>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                    <section class="content-section">
+                        <h2>Introduction</h2>
+                        <p>After looking at the complications of investing in stocks and options, my team and I at HackUVA decided to create a financial hack that would have a global impact in terms of simplifying and automating the way we invest. We believed we could make a difference that would benefit everyone as a whole and revolutionize the investing process. EzStox is a financial hack that pulls real-time data from the stock market and utilizes multiple indexes such as the RSI, CCI, MACD, etc. to help investors make profitable and safe investments while also being able to sell if investments are at risk.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Ideation and Problem</h2>
+                        <p>Coming to HackUVA, our team had no idea of what to do. After brainstorming for about two hours, as a preliminary guideline, we sought towards ideas that correlated with finance. We chose to do a financial idea because our team had all taken an interest towards stocks at the time. After some more discussion, we all decided that we wanted to do something related to the stock market. We already knew that Robinhood was a viable stock-trading app that we could use, but instead of actually processing market transactions through our app we wanted to do something different. We thought through pain points that everyday casual investors go through; and with further discussion, the main problem we came across was finding the best way to make money. Everybody who invests in the stock market has hopes to make money off the stocks that they purchase and sell, so why not ease that process by creating an app that automates and tells you when to buy and sell? After realizing this, EzStox was born.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Process</h2>
+                        <p>We had approximately two days to start, prototype, and complete our project. I primarily worked on the front-end for the website, by coming up with different themes and styles to match what we wanted EzStox to look like. My other teammates started to work on the backend dealing with numerous APIs to plot and track real-time stock data. That weekend I learned how to use AJAX, different libraries, and a plethora of stock data APIs. I also learned more about best practices for HTML, CSS, and Javascript. Some challenges that we ran into were Installing libraries, hard coding, getting stock data (especially on weekends), and back-end testing. Personally, configuring the HTML structure to match what we wanted to show via the backend was the most frustrating part to deal with. Eventually, we got some of the APIs to show up via the plot graph, but we were forced to use old data because it was the weekend. For the configuration, we researched more about different index measures that we wanted the user to be able to toggle in terms of what they thought was important for their portfolio. At the end, we came up with six major indexes: RSI, CCI, MACD, Accumulation/Distribution, volume, and macroeconomic factors (news). We came up with our own algorithm and implemented it in python. Near the end of the hackathon, we came together and combined everything we had and had made a prototype web application. Even though we were using old stock data, the APIs and our algorithm worked as we test-cased it with several different stocks. By the end of the hackathon, we presented to judges and came up with our name, EzStox.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Design</h2>
+                        <p>For the design I had to take into account a multitude of factors. I had to define the product vision and strategy. What was the website going to look like? How was it going to function? I then came up with a preliminary idea where there was an overview and configuration page.</p>
+                        
+                        <div class="content-image">
+                            <img src="../../assets/images/portfolio.png" alt="EzStox Portfolio Overview" class="section-image">
+                            <p class="image-caption">On the overview page, it would display the user's portfolio and the real-time stock data.</p>
+                        </div>
+
+                        <div class="content-image">
+                            <img src="../../assets/images/config.png" alt="EzStox Configuration Page" class="section-image">
+                            <p class="image-caption">For the configuration page, the user would adjust the weights of the different indexes.</p>
+                        </div>
+
+                        <p>By the end, I ran out of time to implement the algorithm and apply it to the webpage, but nonetheless I was proud of what I had created. I had learned a lot with the javascript portion of the webapp and gained more insight into how projects were made.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Final</h2>
+                        <p>While we ended up winning the Domain.com sponsored award, there was a lot more work that was to be done with the app. A lot of little details needed to be addressed and the project itself needed to be completed. Overall though, I was proud with what I had accomplished and what my team had accomplished.</p>
+                        
+                        <div class="content-image">
+                            <img src="../../assets/images/hackuva.png" alt="HackUVA Winning Team" class="section-image">
+                            <p class="image-caption">Winning picture with the domain.com representative and my teammates.</p>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Navigation Footer -->
+                <div class="project-nav-footer">
+                    <a href="../../index.html#projects" class="back-link">← Back to Projects</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">Thanks for reading! Want to stay in touch?</p>
+                <a href="mailto:ksun2715@gmail.com" class="contact-email">ksun2715@gmail.com</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ksun2715/" target="_blank" class="social-link">
+                        <img src="../../assets/icons/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/ksun27" target="_blank" class="social-link">
+                        <img src="../../assets/icons/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.behance.net/kevinsun3" target="_blank" class="social-link">
+                        <img src="../../assets/icons/behance-logo.png" alt="Behance">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

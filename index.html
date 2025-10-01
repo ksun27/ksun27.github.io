@@ -1,140 +1,167 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Kevin Sun</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
-    <link href="https://unpkg.com/cirrus-ui" type="text/css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Sun - Developer & Creative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="assets/images/smile.png">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="app.js"></script>
 </head>
-
 <body>
-    <div id="header" class="header header-fixed u-unselectable header-animated">
-        <div class="header-brand">
-            <div class="nav-item no-hover">
-                <a id="a-color" href="index.html#">
-                    <h6 class="title text-indigo-500">Kevin Sun</h6>
-                </a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">ksun</a>
+            <div class="nav-links">
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="assets/documents/ksun_resume_oct_2025.pdf" target="_blank" class="nav-link">Resume</a>
             </div>
         </div>
-        <div class="header-nav" id="header-menu">
-            <div class="nav-right">
-                <div class="nav-item">
-                    <a href="index.html#Projects" class="text-indigo-500">Work</a>
-                </div>
-                <div class="nav-item">
-                    <a href="about.html" class="text-indigo-500">About</a>
-                </div>
-                <div class="nav-item">
-                    <a href="assets/resume/jan_2024.pdf" target="_blank" class="text-indigo-500">Resume</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </nav>
 
-
-    <section class="min-h-100p w-100p u-flex u-justify-center u-items-center">
-        <div class="content w-80p animated fadeIn">
-            <div class="u-flex u-flex-column u-items-flex-start u-justify-flex-start u-relative u-flex-row-md u-items-stretch-md ">
-                <div class="pt-6 mx-auto w-50p-md mx-0-md pb-4-md pr-4-md">
-                    <h1 class="headline-4 tracking-tighter text-5xl u-text-center u-text-left-md">
-                        Hi there!<br>
-                        <span class="text-indigo-500 font-bold">I'm Kevin.</span>
+    <!-- Hero Section -->
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        hi, i'm ksun
                     </h1>
-                    <h5 class="lead mt-4 mb-8 u-text-center text-gray-600 u-text-left-md">
-                        I'm a <b class="text-indigo-500">developer</b>, <b class="text-indigo-500">designer</b>, and <b class="text-indigo-500">innovator</b> that empowers people to pursue creativity and share their stories.
-                    </h5>
-                    <button class="outline text-indigo-500 btn--lg" onclick="document.getElementById('Projects').scrollIntoView();">View Work</button>
-                    <button class="outline text-indigo-500 btn--lg" onclick="window.open('assets/resume/jan_2024.pdf'); return true;" target="_blank">Resume</button>
+                    <p class="hero-subtitle">
+                        developer, creative, and innovator building meaningful digital experiences
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="assets/documents/ksun_resume_oct_2025.pdf" target="_blank" class="btn btn-secondary">Resume</a>
+                    </div>
                 </div>
-                <div class="u-relative u-flex u-items-center u-justify-center w-80p mx-auto mt-8 h-80p w-50p-md h-auto-md u-block-md">
-                    <a href="about.html">
-                        <img src="assets/images/face2.jpg" class="hover-grow u-left-0 u-z-0 img-cover w-100p h-100p mx-auto u-round-xl mx-0-md w-100p-md u-absolute-md u-top-0-md" alt="image">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="content animated fadeIn">
-        <div class="divider"></div>
-    </div>
-    <section class="u-flex u-justify-center u-items-center animated fadeIn" id="Projects">
-        <div class="row content">
-            <div class="col-6">
-                <figure class="fig">
-                    <a href="factset.html">
-                        <img class="hover-grow img-stretch u-round-xl" src="assets/logos/factset.png">
-                    </a>
-                </figure>
-                <figure class="fig">
-                    <a href="fantasyzer.html">
-                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/fantasyzer.png">
-                    </a>
-                </figure>
-                <figure class="fig">
-                    <a href="https://www.behance.net/collection/173186649/Illustrations" target="_blank">
-                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/art.png">
-                    </a>
-                </figure>
-            </div>
-            <div class="col-6">
-                <figure class="fig">
-                    <a href="ezstox.html">
-                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/ezstox.png" title="" style="">
-                    </a>
-                </figure>
-                <figure class="fig">
-                    <a href="wnba.html">
-                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/wnba.png">
-                    </a>
-                </figure>
-                <figure class="fig">
-                    <a href="https://www.behance.net/collection/173186653/Designs" target="_blank">
-                        <img class="hover-grow img-stretch u-round-xl" src="assets/images/designs.png">
-                    </a>
-                </figure>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="content animated fadeIn">
-            <h6>Thanks for reading! Want to stay in touch?</h6>
-            <a class="text-indigo-500 text-xl font-extrabold" href="mailto:ksun2715@gmail.com">
-                ksun2715@gmail.com
-            </a>
-            <div class="divider"></div>
-            <div class="row u-center">
-                <div class="col">
-                    <a href="https://www.linkedin.com/in/ksun2715/" target="_blank">
-                        <span class="icon">
-                            <img class="hover-grow" src="assets/logos/linkedin.png" />
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="https://github.com/ksun27" target="_blank">
-                        <span class="icon">
-                            <img class="hover-grow" src="assets/logos/github.png" />
-                        </span>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="https://www.behance.net/kevinsun3" target="_blank">
-                        <span class="icon">
-                            <img class="hover-grow" src="assets/logos/behance-logo.png" />
-                        </span>
+                <div class="hero-image">
+                    <a href="pages/about.html" class="profile-link">
+                        <img src="assets/images/face.jpg" alt="Kevin Sun" class="profile-image">
                     </a>
                 </div>
             </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <p>A selection of my recent work in development and creation</p>
+                </div>
+                <div class="projects-grid">
+                    <a href="pages/projects/lease-abstraction.html" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/lease-abstraction-2.jpg" alt="Lease Abstraction Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Lease Abstraction</h3>
+                            <p>Privacy-first AI document analysis with local LLM processing</p>
+                        </div>
+                    </a>
+                    <a href="pages/projects/factset.html" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/icons/factset.png" alt="FactSet Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Factset</h3>
+                            <p>Financial data platform development</p>
+                        </div>
+                    </a>
+                    <a href="pages/projects/ezstox.html" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/ezstox.png" alt="EzStox Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>EZSTOX</h3>
+                            <p>Stock market analysis application</p>
+                        </div>
+                    </a>
+                    <a href="pages/projects/fantasyzer.html" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/fantasyzer.png" alt="Fantasyzer Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Fantasyzer</h3>
+                            <p>Fantasy sports analytics platform</p>
+                        </div>
+                    </a>
+                    <a href="pages/projects/wnba.html" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/wnba.png" alt="WNBA Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>WNBA Analytics</h3>
+                            <p>Basketball statistics visualization</p>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/ksunnyxd/" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/DSC03833.jpg" alt="Videography/Photography">
+                        </div>
+                        <div class="project-content">
+                            <h3>Videography + Photography</h3>
+                            <p>A collection of my recent videography and photography</p>
+                        </div>
+                    </a>
+                    <a href="https://www.behance.net/collection/173186649/Illustrations" target="_blank" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/art.png" alt="Illustrations">
+                        </div>
+                        <div class="project-content">
+                            <h3>Illustrations</h3>
+                            <p>Creative digital artwork collection</p>
+                        </div>
+                    </a>
+                    <a href="https://www.behance.net/collection/173186653/Designs" target="_blank" class="project-card">
+                        <div class="project-image">
+                            <img src="assets/images/designs.png" alt="Design Work">
+                        </div>
+                        <div class="project-content">
+                            <h3>Design Work</h3>
+                            <p>UI/UX design projects</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Let's Connect</h2>
+                    <p>I'm always interested in discussing new opportunities and creative projects</p>
+                </div>
+                <div class="contact-content">
+                    <a href="mailto:ksun2715@gmail.com" class="contact-email">ksun2715@gmail.com</a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ksun2715/" target="_blank" class="social-link">
+                            <img src="assets/icons/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="https://github.com/ksun27" target="_blank" class="social-link">
+                            <img src="assets/icons/github.png" alt="GitHub">
+                        </a>
+                        <a href="https://www.behance.net/kevinsun3" target="_blank" class="social-link">
+                            <img src="assets/icons/behance-logo.png" alt="Behance">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Kevin Sun. All rights reserved.</p>
         </div>
     </footer>
 </body>
-
 </html>
