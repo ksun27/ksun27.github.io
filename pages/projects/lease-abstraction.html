@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lease Abstraction - Kevin Sun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="icon" href="../../assets/images/smile.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">ksun</a>
+            <div class="nav-links">
+                <a href="../../pages/about.html" class="nav-link">About</a>
+                <a href="../../index.html#projects" class="nav-link">Projects</a>
+                <a href="../../index.html#contact" class="nav-link">Contact</a>
+                <a href="../../assets/documents/ksun_resume_oct_2025.pdf" target="_blank" class="nav-link">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <main class="main">
+        <article class="project-detail">
+            <div class="container">
+                <!-- Back Navigation -->
+                <div class="back-nav">
+                    <a href="../../index.html#projects" class="back-link">← Back to Projects</a>
+                </div>
+
+                <!-- Project Header -->
+                <header class="project-header">
+                    <h1 class="project-title">Lease Abstraction</h1>
+                    <p class="project-subtitle">Intelligent Document Analysis System</p>
+                    <div class="content-image">
+                        <img src="../../assets/images/lease-abstraction-2.jpg" alt="Lease Abstraction Interface" class="section-image">
+                    </div>
+                </header>
+
+                <!-- Project Content -->
+                <div class="project-content">
+                    <section class="content-section">
+                        <h2>Introduction</h2>
+                        <p>I've created a privacy-first semantic search and AI analysis platform for lease documents, built with a microservices architecture using ChromaDB vector database and locally-hosted Deepseek LLM via Ollama. The application enables natural language querying across multiple lease documents while maintaining complete data privacy, enabling users to retrieve and summarize information.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Ideation & Problem</h2>
+                        <p>Legal professionals, property managers, and renters regularly work with lengthy lease documents, often needing to extract specific information across multiple contracts. Traditional keyword search fails to capture contextual meaning, and cloud-based AI solutions raise privacy concerns with sensitive legal documents.</p>
+                        <p><strong>The Challenge:</strong> Create an intelligent document analysis system that provides semantic understanding and AI-powered insights while ensuring all data remains local and secure.</p>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Process</h2>
+                        <h3>Technical Approach</h3>
+                        <ul>
+                            <li><strong>Architecture Design</strong> - Implemented microservices architecture with three containerized services (Streamlit frontend, ChromaDB vector store, Ollama LLM server) for separation of concerns and independent scalability</li>
+                            <li><strong>Document Processing Pipeline</strong> - Built PDF text extraction → cleaning → sentence-based chunking (500 char max) → embedding generation using SentenceTransformer (all-MiniLM-L6-v2)</li>
+                            <li><strong>Semantic Search Implementation</strong> - Integrated ChromaDB with persistent storage for vector similarity search, enabling contextual queries beyond simple keyword matching</li>
+                            <li><strong>Local LLM Integration</strong> - Deployed Deepseek R1 7B model via Ollama for AI-powered analysis without external API dependencies</li>
+                            <li><strong>API Development</strong> - Created FastAPI endpoints for inter-service communication and RESTful operations</li>
+                            <li><strong>Containerization</strong> - Orchestrated services using Docker Compose with persistent volumes for data and model storage</li>
+                        </ul>
+
+                        <h3>Key Technical Decisions</h3>
+                        <ul>
+                            <li>ChromaDB over cloud solutions for zero-cost, privacy-preserving vector storage</li>
+                            <li>Local LLM deployment to eliminate API costs and maintain data privacy</li>
+                            <li>Sentence-boundary chunking to preserve semantic integrity while optimizing embedding quality</li>
+                            <li>Microservices pattern for scalability and maintainable code organization</li>
+                        </ul>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Design</h2>
+                        <h3>Data Flow</h3>
+                        <ul>
+                            <li><strong>Upload Phase:</strong> PDF → Text Extraction (pdfplumber) → Cleaning → Chunking → Embedding → ChromaDB Storage</li>
+                            <li><strong>Query Phase:</strong> Natural Language Query → Semantic Search → Context Retrieval → LLM Analysis → Structured Response</li>
+                        </ul>
+                        <p>Queryin has two functions, one for just getting information related to the query and one to use the Deepseek LLM to take that information and garner an appropiate repsonse.</p>
+                        <h4>Simple Query that fetches information:</h4>
+                        <div class="content-image">
+                            <img src="../../assets/images/lease-abstraction-1.jpg" alt="Lease Abstraction Interface" class="section-image">
+                        </div>
+                        <h4>Deepseek LLM Response:</h4>
+                        <div class="content-image">
+                            <img src="../../assets/images/lease-abstraction-3.jpg" alt="Lease Abstraction Analysis" class="section-image">
+                        </div>
+                        <h3>Technology Stack</h3>
+                        <ul>
+                            <li><strong>Frontend:</strong> Streamlit</li>
+                            <li><strong>Backend:</strong> FastAPI</li>
+                            <li><strong>Vector DB:</strong> ChromaDB with SentenceTransformer embeddings</li>
+                            <li><strong>AI/ML:</strong> Ollama + Deepseek R1 7B, SentenceTransformer (all-MiniLM-L6-v2)</li>
+                            <li><strong>Infrastructure:</strong> Docker</li>
+                            <li><strong>Text Processing:</strong> pdfplumber</li>
+                        </ul>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Final Product</h2>
+                        <p>The final application allows users to look deeper into their leases without having to read the whole document. Users begin by uploading multiple PDF lease documents through an intuitive web interface, where the system automatically processes and indexes the content. Once uploaded, they can perform semantic searches using natural language queries like "What are the maintenance responsibilities?" and receive AI-powered detailed analysis with precise source document references. The system supports both broad queries across entire document collections and targeted searches within specific leases, providing flexibility for different use cases.</p>
+
+                        <p>The architecture achieves 100% local processing, ensuring complete data privacy without ever sending sensitive legal documents to external servers. By deploying the Deepseek LLM locally through Ollama, the system eliminates ongoing API costs while maintaining full data privacy. Persistent storage keeps document embeddings available across sessions, so users never need to re-upload or re-process their documents.</p>
+
+                        <p>With this application, reviewing leases is transformed from hours of manual lease review into seconds of search and analysis, while maintaining data privacy through fully local processing.</p>
+                    </section>
+                </div>
+
+                <!-- Navigation Footer -->
+                <div class="project-nav-footer">
+                    <a href="../../index.html#projects" class="back-link">← Back to Projects</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">Thanks for reading! Want to stay in touch?</p>
+                <a href="mailto:ksun2715@gmail.com" class="contact-email">ksun2715@gmail.com</a>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ksun2715/" target="_blank" class="social-link">
+                        <img src="../../assets/icons/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/ksun27" target="_blank" class="social-link">
+                        <img src="../../assets/icons/github.png" alt="GitHub">
+                    </a>
+                    <a href="https://www.behance.net/kevinsun3" target="_blank" class="social-link">
+                        <img src="../../assets/icons/behance-logo.png" alt="Behance">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

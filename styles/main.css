@@ -203,11 +203,22 @@ body {
     justify-content: center;
 }
 
+.profile-link {
+    display: block;
+    transition: var(--transition);
+    border-radius: 50%;
+}
+
+.profile-link:hover {
+    transform: scale(1.05);
+}
+
 .profile-image {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
+    transition: var(--transition);
 }
 
 @media (min-width: 768px) {
@@ -745,6 +756,26 @@ section {
 .content-section ul li {
     margin-bottom: 0.25rem;
     color: var(--color-text);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.content-section pre {
+    background-color: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm);
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    overflow-x: auto;
 }
 
 /* Research Questions */
